@@ -48,13 +48,11 @@ phishing-url-detector/
 ├── .gitignore
 │
 ├── data/
-│   ├── raw/
-│   │   ├── PhiUSIIL_Phishing_URL_Dataset.csv
-│   │   └── phishing urls.xlsx
-│   └── processed/
+│   |
+│   ├── PhiUSIIL_Phishing_URL_Dataset.csv
+│   └── phishing urls.xlsx
+│   
 │
-├── src/
-│   └── svm_train.py               # (renamed from Final-SVM 1.py)
 │
 ├── notebooks/
 │   ├── Naive-Bayes-Final 1.ipynb
