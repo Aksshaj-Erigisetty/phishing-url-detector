@@ -41,7 +41,7 @@ We used the **PhiUSIIL Phishing URL dataset**, containing over **235,000 URLs** 
 
 ---
 ## 🗂 Repository Structure
-'''
+```
 phishing-url-detector/
 ├── README.md
 ├── requirements.txt
@@ -65,4 +65,4 @@ phishing-url-detector/
 └── reports/
 ├── Final_Presentation.pdf
 └── Final_Report.pdf
-'''
+```
