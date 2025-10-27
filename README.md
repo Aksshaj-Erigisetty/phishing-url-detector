@@ -46,25 +46,24 @@ phishing-url-detector/
 ├── README.md
 ├── requirements.txt
 ├── .gitignore
-├── LICENSE
 │
 ├── data/
-│ ├── raw/ # store raw CSVs (ignored in git)
-│ └── processed/ # scaled and cleaned training data
+│   ├── raw/
+│   │   ├── PhiUSIIL_Phishing_URL_Dataset.csv
+│   │   └── phishing urls.xlsx
+│   └── processed/
 │
 ├── src/
-│ ├── data_preprocess.py # scales features and prepares processed CSV
-│ ├── train.py # trains SVM and saves best_model.pkl
-│ ├── predict.py # generates predictions from trained model
-│ └── svm_experiment.py # your original SVM script
+│   └── svm_train.py               # (renamed from Final-SVM 1.py)
 │
 ├── notebooks/
-│ ├── Naive-Bayes-Final.ipynb
-│ └── Neural-Network-Final.ipynb
+│   ├── Naive-Bayes-Final 1.ipynb
+│   └── Neutral-Network-Final 1.ipynb
 │
 └── reports/
-├── Final_Presentation.pdf
-└── Final_Report.pdf
+    ├── Team 2- CDS 303 FINAL Report 1.pdf
+    └── CDS 303-Team 2 Final Presentation 1.pdf
+
 ```
 ---
 
