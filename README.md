@@ -66,3 +66,40 @@ phishing-url-detector/
 ├── Final_Presentation.pdf
 └── Final_Report.pdf
 ```
+---
+
+---
+
+## 📊 Datasets Used
+
+This project uses two datasets for building and testing phishing detection models:
+
+### 1️⃣ PhiUSIIL Phishing URL Dataset (Main)
+- **File:** `PhiUSIIL_Phishing_URL_Dataset.csv`
+- **Source:** [UCI Machine Learning Repository](https://doi.org/10.1016/j.cose.2023.103545)
+- **Size:** 235,796 rows × 56 columns  
+- **Description:**  
+  This dataset contains features extracted from real-world URLs and their corresponding labels indicating whether they are **phishing (0)** or **legitimate (1)**.  
+  It includes structural, lexical, and behavior-based URL attributes such as:
+  - Number of Images  
+  - Number of Self References  
+  - Largest Line of Code  
+  - Number of External References  
+  - URL Length, Domain Age, and more
+
+### 2️⃣ Custom Phishing URLs Dataset
+- **File:** `phishing urls.xlsx`
+- **Description:**  
+  A smaller, manually curated dataset used for **testing feature extraction** and verifying the model pipeline during development.  
+  It includes sample phishing and legitimate URLs with a simplified set of columns for quick experimentation.
+
+---
+
+✅ Both datasets can be stored under:
+```
+├── PhiUSIIL_Phishing_URL_Dataset.csv
+└── phishing urls.xlsx
+```
+
+
+
