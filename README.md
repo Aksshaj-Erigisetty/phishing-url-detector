@@ -1,33 +1,43 @@
-# Phishing URL Detector
+# Phishing URL Detector 🧠🔗
 
-**Brief:** A machine-learning project to detect phishing URLs using feature engineering and classification models.  
-**Author:** Anantha Aksshaj Erigisetty (Aksshaj)
+A machine learning project to detect **phishing URLs** using multiple classification models — **Support Vector Machine (SVM)**, **Neural Network**, and **Naive Bayes** — based on URL features.  
+Developed as part of the **CDS 303 Data Mining** course at George Mason University.
 
-## Contents
-- `data/` — raw and processed datasets (not all raw data included here)
-- `notebooks/` — EDA and modeling notebooks
-- `src/` — python scripts for preprocessing, training, and inference
-- `models/` — saved model artifacts
-- `requirements.txt` — Python dependencies
+---
 
-## Project overview
-1. **Data**: `data/raw/phishing_data.csv` — URL list with `label` column (1 = phishing, 0 = benign).
-2. **Feature engineering**: extract URL-based features (length, special chars, entropy, domain age if available, host tokens, presence of IP, suspicious TLDs, URL shortening, etc.).
-3. **Models**: baseline (Logistic Regression), tree-based (RandomForest/XGBoost), and an ensemble.
-4. **Evaluation**: ROC-AUC, Precision-Recall, F1-score; show confusion matrices and top features.
-5. **Deliverables**: reproducible notebook, training script `src/train.py`, and inference script `src/predict.py`.
+## 📊 Project Overview
 
-## Quick start
-cd phishing-url-detector  # cd into the unzipped folder
-git init
-git add .
-git commit -m "chore: initial structured repo with README, scripts, notebooks, reports"
-git branch -M main
-git remote add origin https://github.com/Aksshaj-Erigisetty/phishing-url-detector.git
-git push -u origin main
+Phishing is a cyberattack method where fake websites impersonate legitimate ones to steal personal or sensitive data.  
+Our goal was to build models that can **automatically classify URLs as either “phishing” or “legitimate.”**
 
-python src/data_preprocess.py --input data/raw/phishing_data.csv --output data/processed/phishing_processed.csv
-# train
-python src/train.py --data data/processed/phishing_processed.csv --model models/best_model.pkl
-# predict (example)
-python src/predict.py --model models/best_model.pkl --url "http://example-suspicious.com"
+We used the **PhiUSIIL Phishing URL dataset**, containing over **235,000 URLs** and **56 features**, focusing on key traits such as:
+- Number of Images
+- Number of Self Redirects
+- Largest Line of Code
+- Number of External References
+
+---
+
+## 🧩 CRISP-DM Workflow
+
+1. **Business Understanding** – Identify how machine learning can detect phishing attempts.  
+2. **Data Understanding** – Explore patterns and relationships among URL-based features.  
+3. **Data Preparation** – Handle outliers, scale numeric data, and address class imbalance.  
+4. **Modeling** – Train and compare multiple classifiers.  
+5. **Evaluation** – Validate results using cross-validation, confusion matrices, and ROC curves.  
+6. **Deployment** – Propose integration into a browser extension or company system.
+
+---
+
+## ⚙️ Models & Results
+
+| Model | Accuracy | Precision | Recall | F1-Score |
+|:------|:---------:|:----------:|:-------:|:----------:|
+| **Support Vector Machine (SVM)** | **98.0%** | 0.97 | 0.98 | 0.98 |
+| **Neural Network** | **98.6%** | 0.9868 | 0.9816 | 0.9842 |
+| **Naive Bayes** | **96.2%** | 0.945 | 0.969 | 0.957 |
+
+✅ **Best Model:** SVM (RBF kernel, C = 1.0, gamma = scale, probability = True)
+
+
+
