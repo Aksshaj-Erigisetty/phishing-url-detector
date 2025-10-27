@@ -129,4 +129,69 @@ During the analysis of the PhiUSIIL Phishing URL dataset, several strong pattern
 
 ---
 
+---
+
+## 🧪 Evaluation & Visualization
+
+The models were evaluated using several key metrics to ensure reliability and robustness.
+
+### 1️⃣ Evaluation Metrics
+Each model was tested using **5-fold Stratified Cross-Validation**, ensuring both phishing and legitimate URLs were represented evenly across folds.
+
+| Model | Accuracy | Precision | Recall | F1-Score |
+|:------|:---------:|:----------:|:-------:|:----------:|
+| **SVM (RBF Kernel)** | **98.0%** | 0.97 | 0.98 | 0.98 |
+| **Neural Network** | **98.6%** | 0.9868 | 0.9816 | 0.9842 |
+| **Naive Bayes** | **96.2%** | 0.945 | 0.969 | 0.957 |
+
+✅ **Best Model:**  
+Support Vector Machine (RBF kernel) — offered the best balance between speed, accuracy, and generalization.
+
+---
+
+### 2️⃣ Confusion Matrix (SVM)
+
+|                | Predicted Phishing | Predicted Legitimate |
+|----------------|-------------------:|---------------------:|
+| **Actual Phishing** | True Positive (97%) | False Negative (2%) |
+| **Actual Legitimate** | False Positive (1%) | True Negative (99%) |
+
+- High true-positive and true-negative rates indicate that the SVM model is very effective at distinguishing phishing URLs.  
+- False positives remain minimal, meaning few legitimate sites are incorrectly flagged.
+
+---
+
+### 3️⃣ ROC Curve & AUC
+
+- The **Receiver Operating Characteristic (ROC)** curve for SVM shows an **AUC ≈ 0.99**, indicating excellent separability between phishing and legitimate URLs.  
+- Both the Neural Network and Naive Bayes models also achieved strong AUC values (above 0.95).  
+- The ROC visualization confirms that the SVM’s probability predictions are highly reliable.
+
+---
+
+### 4️⃣ Cross-Validation Summary
+
+| Metric | Mean | Std. Deviation |
+|:-------|:----:|:---------------:|
+| **Precision** | 0.979 | ±0.002 |
+| **Recall** | 0.981 | ±0.001 |
+| **F1-score** | 0.980 | ±0.002 |
+
+Cross-validation results show that the model is **consistent and stable** across different subsets of data, confirming that it is not overfitting.
+
+---
+
+### 5️⃣ Visualization Highlights
+
+From the analysis and reports:
+- **Violin plots** showed skewed feature distributions but clear separability between classes.  
+- **Correlation matrix** identified key predictors like `NoOfImage`, `LineOfCode`, and `NoOfExternalRef`.  
+- **Pair plots** visually confirmed clusters of phishing vs. legitimate URLs.  
+- **ROC curve and bar plots** validated the strong predictive performance of SVM.
+
+---
+
+📊 *All plots and visuals can be found in the Jupyter notebooks and presentation slides (`/notebooks` and `/reports`).*
+
+---
 
