@@ -18,13 +18,14 @@
 5. **Deliverables**: reproducible notebook, training script `src/train.py`, and inference script `src/predict.py`.
 
 ## Quick start
-```bash
-git clone https://github.com/yourusername/phishing-detector.git
-cd phishing-detector
-python -m venv venv
-source venv/bin/activate   # or venv\Scripts\activate on Windows
-pip install -r requirements.txt
-# preprocess
+cd phishing-url-detector  # cd into the unzipped folder
+git init
+git add .
+git commit -m "chore: initial structured repo with README, scripts, notebooks, reports"
+git branch -M main
+git remote add origin https://github.com/Aksshaj-Erigisetty/phishing-url-detector.git
+git push -u origin main
+
 python src/data_preprocess.py --input data/raw/phishing_data.csv --output data/processed/phishing_processed.csv
 # train
 python src/train.py --data data/processed/phishing_processed.csv --model models/best_model.pkl
