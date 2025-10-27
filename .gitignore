@@ -1,1 +1,37 @@
+# =========================================
+# Git Ignore for Phishing URL Detector Project
+# =========================================
 
+# --- macOS system files ---
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# --- Python cache / virtual env ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+venv/
+env/
+*.env
+
+# --- Data files ---
+# Ignore large raw datasets or temporary files
+*.csv
+*.xlsx
+*.zip
+
+# --- Notebook checkpoints ---
+.ipynb_checkpoints/
+
+# --- Logs and temporary outputs ---
+*.log
+*.tmp
+*.bak
+*.swp
+
+# --- VSCode or IDE settings ---
+.vscode/
+.idea/
