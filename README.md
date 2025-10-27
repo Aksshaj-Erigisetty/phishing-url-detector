@@ -39,5 +39,30 @@ We used the **PhiUSIIL Phishing URL dataset**, containing over **235,000 URLs** 
 
 ✅ **Best Model:** SVM (RBF kernel, C = 1.0, gamma = scale, probability = True)
 
+---
 
+## 🗂 Repository Structure
+phishing-url-detector/
+├── README.md
+├── requirements.txt
+├── .gitignore
+├── LICENSE
+│
+├── data/
+│ ├── raw/ # store raw CSVs (ignored in git)
+│ └── processed/ # scaled and cleaned training data
+│
+├── src/
+│ ├── data_preprocess.py # scales features and prepares processed CSV
+│ ├── train.py # trains SVM and saves best_model.pkl
+│ ├── predict.py # generates predictions from trained model
+│ └── svm_experiment.py # your original SVM script
+│
+├── notebooks/
+│ ├── Naive-Bayes-Final.ipynb
+│ └── Neural-Network-Final.ipynb
+│
+└── reports/
+├── Final_Presentation.pdf
+└── Final_Report.pdf
 
