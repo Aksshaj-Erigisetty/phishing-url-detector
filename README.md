@@ -101,5 +101,32 @@ This project uses two datasets for building and testing phishing detection model
 └── phishing urls.xlsx
 ```
 
+---
+
+## 🧠 Key Insights
+
+During the analysis of the PhiUSIIL Phishing URL dataset, several strong patterns emerged that differentiate phishing websites from legitimate ones.
+
+### 1️⃣ Technical Observations
+- **Number of Self-Redirects:**  
+  Phishing websites often redirect to themselves multiple times, making it difficult for users to trace the true destination.
+- **Largest Line of Code:**  
+  Many phishing pages have unusually long and inefficient code lines, which may be used to obfuscate malicious scripts.
+- **External References:**  
+  Phishing websites tend to have a high number of external links pointing to suspicious or unrelated domains.
+- **Number of Images:**  
+  Either too many or too few images — both extremes — are often indicators of fake websites.
+
+### 2️⃣ Model Findings
+- **Support Vector Machine (SVM)** delivered the most consistent accuracy at **98%**.
+- **Neural Network** slightly outperformed SVM in recall but required more computation time.
+- **Naive Bayes** offered a lightweight baseline model with **96%** accuracy.
+- Addressing **outliers** and **scaling** numeric features with **Min-Max normalization** significantly improved results.
+
+### 3️⃣ Practical Implications
+- These results show that organizations can build **fast and reliable phishing detectors** using only URL-based features.
+- This approach can be integrated into **browser extensions** or **email filters** to automatically warn users about suspicious links.
+
+---
 
 
