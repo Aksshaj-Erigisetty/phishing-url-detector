@@ -195,3 +195,24 @@ From the analysis and reports:
 
 ---
 
+---
+
+## 📘 Dataset Reference
+
+> **Prasad, A. & Chandra, S. (2024).** *PhiUSIIL Phishing URL (Website)* [Dataset].  
+> UCI Machine Learning Repository.  
+> DOI: [10.1016/j.cose.2023.103545](https://doi.org/10.1016/j.cose.2023.103545)
+
+This dataset contains over **235,000 URLs** with 56 extracted features describing URL behavior, structure, and content.  
+It is widely used for research on phishing detection using machine learning models.
+
+Additionally, a smaller custom dataset (`phishing urls.xlsx`) was used for testing and feature validation.
+
+---
+
+
+### ⭐ Acknowledgment
+This project was developed as part of **CDS 303 – Data Mining** coursework.  
+Special thanks to my teammates and instructors for their collaboration and guidance.
+
+---
