@@ -66,3 +66,14 @@ phishing-url-detector/
 ├── Final_Presentation.pdf
 └── Final_Report.pdf
 
+
+---
+
+### ⚠️ Important Tip
+Make sure:
+- You have **three backticks (```)** **before** and **after** the folder structure (as shown).  
+- No extra spaces or symbols before/after those backticks.
+
+---
+
+Once you save and commit that, refresh your repo — it’ll look **perfectly formatted like a real GitHub folder tree** ✅
