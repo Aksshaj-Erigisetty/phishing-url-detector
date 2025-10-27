@@ -1,11 +1,11 @@
-# Phishing URL Detector 🧠🔗
+# Phishing URL Detector 
 
 A machine learning project to detect **phishing URLs** using multiple classification models — **Support Vector Machine (SVM)**, **Neural Network**, and **Naive Bayes** — based on URL features.  
 Developed as part of the **CDS 303 Data Mining** course at George Mason University.
 
 ---
 
-## 📊 Project Overview
+## Project Overview
 
 Phishing is a cyberattack method where fake websites impersonate legitimate ones to steal personal or sensitive data.  
 Our goal was to build models that can **automatically classify URLs as either “phishing” or “legitimate.”**
@@ -18,7 +18,7 @@ We used the **PhiUSIIL Phishing URL dataset**, containing over **235,000 URLs** 
 
 ---
 
-## 🧩 CRISP-DM Workflow
+## CRISP-DM Workflow
 
 1. **Business Understanding** – Identify how machine learning can detect phishing attempts.  
 2. **Data Understanding** – Explore patterns and relationships among URL-based features.  
@@ -29,7 +29,7 @@ We used the **PhiUSIIL Phishing URL dataset**, containing over **235,000 URLs** 
 
 ---
 
-## ⚙️ Models & Results
+## Models & Results
 
 | Model | Accuracy | Precision | Recall | F1-Score |
 |:------|:---------:|:----------:|:-------:|:----------:|
@@ -37,10 +37,10 @@ We used the **PhiUSIIL Phishing URL dataset**, containing over **235,000 URLs** 
 | **Neural Network** | **98.6%** | 0.9868 | 0.9816 | 0.9842 |
 | **Naive Bayes** | **96.2%** | 0.945 | 0.969 | 0.957 |
 
-✅ **Best Model:** SVM (RBF kernel, C = 1.0, gamma = scale, probability = True)
+**Best Model:** SVM (RBF kernel, C = 1.0, gamma = scale, probability = True)
 
 ---
-## 🗂 Repository Structure
+## Repository Structure
 ```
 phishing-url-detector/
 ├── README.md
@@ -70,11 +70,11 @@ phishing-url-detector/
 
 ---
 
-## 📊 Datasets Used
+## Datasets Used
 
 This project uses two datasets for building and testing phishing detection models:
 
-### 1️⃣ PhiUSIIL Phishing URL Dataset (Main)
+### PhiUSIIL Phishing URL Dataset (Main)
 - **File:** `PhiUSIIL_Phishing_URL_Dataset.csv`
 - **Source:** [UCI Machine Learning Repository](https://doi.org/10.1016/j.cose.2023.103545)
 - **Size:** 235,796 rows × 56 columns  
@@ -87,7 +87,7 @@ This project uses two datasets for building and testing phishing detection model
   - Number of External References  
   - URL Length, Domain Age, and more
 
-### 2️⃣ Custom Phishing URLs Dataset
+### Custom Phishing URLs Dataset
 - **File:** `phishing urls.xlsx`
 - **Description:**  
   A smaller, manually curated dataset used for **testing feature extraction** and verifying the model pipeline during development.  
@@ -95,7 +95,7 @@ This project uses two datasets for building and testing phishing detection model
 
 ---
 
-✅ Both datasets can be stored under:
+Both datasets can be stored under:
 ```
 ├── PhiUSIIL_Phishing_URL_Dataset.csv
 └── phishing urls.xlsx
@@ -103,11 +103,11 @@ This project uses two datasets for building and testing phishing detection model
 
 ---
 
-## 🧠 Key Insights
+## Key Insights
 
 During the analysis of the PhiUSIIL Phishing URL dataset, several strong patterns emerged that differentiate phishing websites from legitimate ones.
 
-### 1️⃣ Technical Observations
+### Technical Observations
 - **Number of Self-Redirects:**  
   Phishing websites often redirect to themselves multiple times, making it difficult for users to trace the true destination.
 - **Largest Line of Code:**  
@@ -117,13 +117,13 @@ During the analysis of the PhiUSIIL Phishing URL dataset, several strong pattern
 - **Number of Images:**  
   Either too many or too few images — both extremes — are often indicators of fake websites.
 
-### 2️⃣ Model Findings
+### Model Findings
 - **Support Vector Machine (SVM)** delivered the most consistent accuracy at **98%**.
 - **Neural Network** slightly outperformed SVM in recall but required more computation time.
 - **Naive Bayes** offered a lightweight baseline model with **96%** accuracy.
 - Addressing **outliers** and **scaling** numeric features with **Min-Max normalization** significantly improved results.
 
-### 3️⃣ Practical Implications
+### Practical Implications
 - These results show that organizations can build **fast and reliable phishing detectors** using only URL-based features.
 - This approach can be integrated into **browser extensions** or **email filters** to automatically warn users about suspicious links.
 
@@ -131,11 +131,11 @@ During the analysis of the PhiUSIIL Phishing URL dataset, several strong pattern
 
 ---
 
-## 🧪 Evaluation & Visualization
+##  Evaluation & Visualization
 
 The models were evaluated using several key metrics to ensure reliability and robustness.
 
-### 1️⃣ Evaluation Metrics
+### Evaluation Metrics
 Each model was tested using **5-fold Stratified Cross-Validation**, ensuring both phishing and legitimate URLs were represented evenly across folds.
 
 | Model | Accuracy | Precision | Recall | F1-Score |
@@ -144,12 +144,12 @@ Each model was tested using **5-fold Stratified Cross-Validation**, ensuring bot
 | **Neural Network** | **98.6%** | 0.9868 | 0.9816 | 0.9842 |
 | **Naive Bayes** | **96.2%** | 0.945 | 0.969 | 0.957 |
 
-✅ **Best Model:**  
+**Best Model:**  
 Support Vector Machine (RBF kernel) — offered the best balance between speed, accuracy, and generalization.
 
 ---
 
-### 2️⃣ Confusion Matrix (SVM)
+### Confusion Matrix (SVM)
 
 |                | Predicted Phishing | Predicted Legitimate |
 |----------------|-------------------:|---------------------:|
@@ -161,7 +161,7 @@ Support Vector Machine (RBF kernel) — offered the best balance between speed, 
 
 ---
 
-### 3️⃣ ROC Curve & AUC
+### ROC Curve & AUC
 
 - The **Receiver Operating Characteristic (ROC)** curve for SVM shows an **AUC ≈ 0.99**, indicating excellent separability between phishing and legitimate URLs.  
 - Both the Neural Network and Naive Bayes models also achieved strong AUC values (above 0.95).  
@@ -169,7 +169,7 @@ Support Vector Machine (RBF kernel) — offered the best balance between speed, 
 
 ---
 
-### 4️⃣ Cross-Validation Summary
+### Cross-Validation Summary
 
 | Metric | Mean | Std. Deviation |
 |:-------|:----:|:---------------:|
@@ -181,7 +181,7 @@ Cross-validation results show that the model is **consistent and stable** across
 
 ---
 
-### 5️⃣ Visualization Highlights
+### Visualization Highlights
 
 From the analysis and reports:
 - **Violin plots** showed skewed feature distributions but clear separability between classes.  
@@ -191,7 +191,7 @@ From the analysis and reports:
 
 ---
 
-📊 *All plots and visuals can be found in the Jupyter notebooks and presentation slides (`/notebooks` and `/reports`).*
+*All plots and visuals can be found in the Jupyter notebooks and presentation slides (`/notebooks` and `/reports`).*
 
 ---
 
